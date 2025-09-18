@@ -14,14 +14,14 @@ services:
 
       # NGINX logs
       - ./logs/nginx:/var/logs/nginx
-
+        
         - certs:/etc/letsencrypt
       # Let's Encrypt certificate (SSL cert)
       - /etc/letsencrypt/live/dev.pacs.sltechnocrats.click:/etc/letsencrypt/live/dev.pacs.sltechnocrats.click:ro
       - /etc/letsencrypt/archive/dev.pacs.sltechnocrats.click:/etc/letsencrypt/archive/dev.pacs.sltechnocrats.click:ro
       - /etc/letsencrypt/privkey.pem:/etc/letsencrypt/privkey.pem:ro  # optional and risky if used incorrectly
 
-  
+
     ports:
       - "80:80"   # HTTP (for redirect)
       - "443:443" # HTTPS (with SSL)
