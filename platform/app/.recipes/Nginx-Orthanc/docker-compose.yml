@@ -15,18 +15,29 @@ services:
       # NGINX logs
       - ./logs/nginx:/var/logs/nginx
 
+        - certs:/etc/letsencrypt
       # Let's Encrypt certificate (SSL cert)
       - /etc/letsencrypt/live/dev.pacs.sltechnocrats.click:/etc/letsencrypt/live/dev.pacs.sltechnocrats.click:ro
       - /etc/letsencrypt/archive/dev.pacs.sltechnocrats.click:/etc/letsencrypt/archive/dev.pacs.sltechnocrats.click:ro
       - /etc/letsencrypt/privkey.pem:/etc/letsencrypt/privkey.pem:ro  # optional and risky if used incorrectly
 
-
+  
     ports:
       - "80:80"   # HTTP (for redirect)
       - "443:443" # HTTPS (with SSL)
     depends_on:
       - orthanc
     restart: on-failure
+
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - certs:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    command: certonly --webroot -w /var/www/certbot -d dev.pacs.sltechnocrats.click --email priyanshu@sltechnocrats.net --agree-tos --non-interactive
+
 
   # Orthanc PACS
   orthanc:
@@ -40,4 +51,4 @@ services:
     ports:
       - "4242:4242"
       - "8042:8042"
-    restart: unless-stopped 
+    restart: unless-stopped
