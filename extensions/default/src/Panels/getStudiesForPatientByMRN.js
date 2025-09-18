@@ -1,19 +1,21 @@
 async function getStudiesForPatientByMRN(dataSource, qidoForStudyUID) {
-  if (!qidoForStudyUID?.length) {
-    return [];
-  }
+  return qidoForStudyUID;
 
-  const mrn = qidoForStudyUID[0].mrn;
+  // if (!qidoForStudyUID?.length) {
+  //   return [];
+  // }
 
-  // if not defined or empty, return the original qidoForStudyUID
-  if (!mrn) {
-    return qidoForStudyUID;
-  }
+  // const mrn = qidoForStudyUID[0].mrn;
 
-  return dataSource.query.studies.search({
-    patientId: mrn,
-    disableWildcard: true,
-  });
+  // // if not defined or empty, return the original qidoForStudyUID
+  // if (!mrn) {
+  //   return qidoForStudyUID;
+  // }
+
+  // return dataSource.query.studies.search({
+  //   patientId: mrn,
+  //   disableWildcard: false,
+  // });
 }
 
 export default getStudiesForPatientByMRN;

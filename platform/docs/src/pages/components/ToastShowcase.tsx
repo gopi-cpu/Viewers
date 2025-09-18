@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../../../../ui-next/src/components/Button';
-import { Toaster, toast } from '../../../../ui-next/src/components/Sonner';
+import { toast } from '../../../../ui-next/src/components/Sonner';
 import ShowcaseRow from './ShowcaseRow';
 
 /**
@@ -152,7 +152,7 @@ Example code coming soon.
           Toast with Buttons
         </Button>
       </div>
-      <Toaster />
+      {/* <Toaster /> */}
     </ShowcaseRow>
   );
 }

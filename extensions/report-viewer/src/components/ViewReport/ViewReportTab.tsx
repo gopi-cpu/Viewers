@@ -400,7 +400,7 @@ const ViewReportTab: React.FC<Props> = ({ analysis }) => {
               className="w-full rounded bg-green-700 p-1.5 text-sm font-semibold text-white sm:w-auto"
               onClick={() => handleSubmit()}
             >
-              Send Report Back
+              Dispatch Report
             </button>
           </div>
         )}

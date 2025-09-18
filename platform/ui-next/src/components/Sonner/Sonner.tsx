@@ -6,7 +6,8 @@ type ToasterProps = React.ComponentProps<typeof Sonner>;
 
 const Toaster = ({ ...props }: ToasterProps) => {
   return (
-    <Sonner
+    <div>
+      {/* <Sonner
       className="toaster group"
       loadingIcon={<Icons.LoadingSpinner />}
       icons={{
@@ -24,7 +25,8 @@ const Toaster = ({ ...props }: ToasterProps) => {
         },
       }}
       {...props}
-    />
+    /> */}
+    </div>
   );
 };
 

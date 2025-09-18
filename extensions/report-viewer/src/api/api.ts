@@ -2,9 +2,9 @@ import axios from 'axios';
 import { ensureHTTPS } from '../utils/utils';
 import { getApiToken } from '../storage/storage';
 
-export const BASE_URL = 'https://api.smaro.app/api';
-export const OHIF_SERVER_URL = 'https://pacs.smaro.app';
-export const SOCKET_SERVER_URL = 'https://api.smaro.app';
+export const BASE_URL = 'https://dev.api.sltechnocrats.click/api';
+export const OHIF_SERVER_URL = 'https://dev.pacs.sltechnocrats.click';
+export const SOCKET_SERVER_URL = 'https://dev.socket.sltechnocrats.click';
 export const AWS_BUCKET_URL = 'https://smaro-prod-bucket.s3.amazonaws.com';
 
 export const api = {

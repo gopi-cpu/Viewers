@@ -24,7 +24,7 @@ window.config = {
       configuration: {
         friendlyName: 'Orthanc Server',
         name: 'Orthanc',
-        wadoUriRoot: '/wado',
+        wadoUriRoot: '/pacs-smaro/wado',
         qidoRoot: '/pacs-smaro/dicom-web',
         wadoRoot: '/pacs-smaro/dicom-web',
         qidoSupportsIncludeField: false,
