@@ -2,16 +2,16 @@ import axios from 'axios';
 import { ensureHTTPS } from '../utils/utils';
 import { getApiToken } from '../storage/storage';
 
-export const BASE_URL = 'https://api.smaro.app/api';
-export const OHIF_SERVER_URL = 'https://pacs.smaro.app';
-export const SOCKET_SERVER_URL = 'https://api.smaro.app';
-export const AWS_BUCKET_URL = 'https://smaro-prod-bucket.s3.amazonaws.com';
+// export const BASE_URL = 'https://api.smaro.app/api';
+// export const OHIF_SERVER_URL = 'https://pacs.smaro.app';
+// export const SOCKET_SERVER_URL = 'https://api.smaro.app';
+// export const AWS_BUCKET_URL = 'https://smaro-prod-bucket.s3.amazonaws.com';
 
-// export const BASE_URL = "https://dev-apis.developerstest.online/api";
-// export const OHIF_SERVER_URL = "https://devothnac.developerstest.online";
-// export const SOCKET_SERVER_URL = "https://dev.socket.sltechnocrats.click";
-// // export const AWS_BUCKET_URL = 'https://smaro-dev1.s3.ap-south-1.amazonaws.com'
-// export const AWS_BUCKET_URL =  'http://smaro-dev1.s3-website.ap-south-1.amazonaws.com'
+export const BASE_URL = "https://dev-apis.developerstest.online/api";
+export const OHIF_SERVER_URL = "https://devothnac.developerstest.online";
+export const SOCKET_SERVER_URL = "https://pacs.smaro.app";
+// export const AWS_BUCKET_URL = 'https://smaro-dev1.s3.ap-south-1.amazonaws.com'
+export const AWS_BUCKET_URL = 'https://smaro-prod-bucket.s3.amazonaws.com'
 
 export const api = {
   get: async (url: string, params?: any) => {
